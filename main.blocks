@@ -1,0 +1,38 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="p}]XKPZ;#Ys;TN_E(iyr">Player</variable><variable type="KIND_SpriteKind" id="a$k4x2q^Yf?:44DbBdJ3">Projectile</variable><variable type="KIND_SpriteKind" id="`DFY=`!F@(0~clMCZA@d">Food</variable><variable type="KIND_SpriteKind" id="YU!PfD;.x;[xad1{^Ol|">Enemy</variable><variable id="cUE?.+6ZHsEEgd7Q7jsN">mySprite</variable><variable id="2mP7Za[hxR$7O##$MDFc">thePlayer</variable></variables><comment id="0,Xy0#![:-e1]vqzoLz)" x="790" y="577" h="167" w="312">pirate things:
+1.find treasure!
+2.follow maps
+3.avoid krakens</comment><block type="gameinterval" id="I5p=.$JKdAw~$:^:.DxB" x="570" y="-30"><value name="period"><shadow type="timePicker" id="^@`mf;EtvuvYqokChqfW"><field name="ms">1000</field></shadow></value><statement name="HANDLER"><block type="function_call" id="//qHBKS4CJp.a},#Uc.8"><mutation name="saveGame" functionid="5SjBf-wtzK_m=eKRQS$p"/></block></statement></block><block type="pxt-on-start" id=":dt:#lxQ|Y[jM4;s[y_h" x="0" y="0"><statement name="HANDLER"><block type="tilemap_editor" id="m+XL?.J)nlj!;mCQUKx-"><field name="tilemap">tilemap`level1`</field><data>{"commentRefs":[],"fieldData":{"tilemap":"level1"}}</data><next><block type="variables_set" id="{BBC?IN+yaf{a?m0y$@+"><field name="VAR" id="2mP7Za[hxR$7O##$MDFc">thePlayer</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="(JG$?OsmiYxy%|^vnk?@"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . e e e . . . . . . . 
+. . . . 1 1 1 e f f 1 . . . . . 
+. . . . 1 1 1 e f f 1 . . . . . 
+. . . . 1 1 1 e 1 1 1 . . . . . 
+. . . . 1 1 1 1 1 1 1 . . . . . 
+. . . . 1 1 1 1 1 1 1 . . . . . 
+. . . . . . . e . . . . . . . . 
+. . . . . . . e . . . . . . . b 
+b b . . . . e e . . . . . b b b 
+e e e e e e e e e e e e e e e b 
+e e e e e e e e e e e e e e e . 
+b b b b b b b b b b b b b b b . 
+. e e e e e e e e e e e e e . . 
+. b b b b b b b b b b b b b . . 
+. . e e e e e e e e e e e . . . 
+. . . . 1 1 1 1 1 1 1 . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image1"}}</data></shadow><block type="screen_image_picker" id="QwV!C!$3v%x!_o)LnzWi"><field name="img">img`
+. . . . . . e e e . . . . . . . 
+. . . . 1 1 1 e 1 1 1 . . . . . 
+. . . . 1 1 1 e f f 1 . . . . . 
+. . . . 1 1 1 e f f 1 . . . . . 
+. . . . 1 1 1 e 1 1 1 . . . . . 
+. . . . 1 1 1 1 1 1 1 . . . . . 
+. . . . 1 1 1 1 1 1 1 . . . . . 
+. . . . . . . e . . . . . . . . 
+. . . . . . . e . . . . . . . b 
+b b . . . . e e . . . . . b b b 
+e e e e e e e e e e e e e e e b 
+b b b b b b b b b b b b b b b . 
+. e e e e e e e e e e e e e . . 
+. b b b b b b b b b b b b b . . 
+. . e e e e e e e e e e e . . . 
+. . . . 1 1 1 1 1 1 1 . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image2"}}</data></block></value><value name="kind"><shadow type="spritekind" id="*rUq7jls-P]yV(@I9MSk"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite" id="-Aw_T`t.^:Ib/W]p;T6_"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get" id="6Qq]}4yAP=w0F,+s}wpD"><field name="VAR" id="2mP7Za[hxR$7O##$MDFc">thePlayer</field></block></value><next><block type="camerafollow" id="_mFePIqOcvjaNgw*BMH0"><value name="sprite"><block type="variables_get" id="l}kj[lXqV=kzwsEecXYe"><field name="VAR" id="2mP7Za[hxR$7O##$MDFc">thePlayer</field></block></value><next><block type="function_call" id="v!!7VT4EC6Er=*+[]cq^"><mutation name="loadGame" functionid="ct#hEiLOV3!w3)@XBl:A"/></block></next></block></next></block></next></block></next></block></statement></block><block type="function_definition" id="5Zyo4@8.,0)U_5]SvDtk" x="690" y="270"><mutation name="loadGame" functionid="ct#hEiLOV3!w3)@XBl:A"/><field name="function_name">loadGame</field><statement name="STACK"><block type="spritesetpos" id="MakUYkL`g:uW;IV51K)U"><value name="sprite"><block type="variables_get" id="hAB!TzweOOCGZ{:(m4Dw"><field name="VAR" id="2mP7Za[hxR$7O##$MDFc">thePlayer</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">0</field></shadow><block type="block_settings_read_number" id="%=o,r#(on-/@))Zmvm?K"><value name="name"><shadow type="text" id="rpmUhASR)!]BL/.b?X@X"><field name="TEXT">playerX</field></shadow></value></block></value><value name="y"><shadow type="positionPicker"><field name="index">0</field></shadow><block type="block_settings_read_number" id="B/e4vA*OiB.![d$H`lMa"><value name="name"><shadow type="text" id="WQxuA+q(,~0f`vL0,;GR"><field name="TEXT">playerY</field></shadow></value></block></value></block></statement></block><block type="function_definition" id="jiTMHc^dUPu4a?pl_E$*" x="-10" y="390"><mutation name="saveGame" functionid="5SjBf-wtzK_m=eKRQS$p"/><field name="function_name">saveGame</field><statement name="STACK"><block type="block_settings_write_number" id="cOv3^`@EmB4|z;P5G=i*"><value name="name"><shadow type="text" id="MPQnzjwKzU7o%Qm9umF8"><field name="TEXT">playerX</field></shadow></value><value name="value"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get" id="WKV4F#lSr/Dv,0lDx/r3"><field name="property">Sprite.x</field><value name="mySprite"><block type="variables_get" id="3DVs;+M{_qWUY5:19IH="><field name="VAR" id="2mP7Za[hxR$7O##$MDFc">thePlayer</field></block></value></block></value><next><block type="block_settings_write_number" id="aY1N)k7F#Tb;M1YN!$q?"><value name="name"><shadow type="text" id="I.Z]E@;WQ)9UnQR{]v*M"><field name="TEXT">playerY</field></shadow></value><value name="value"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get" id="Rc4Ul;[VCaB{M{Pvu]E/"><field name="property">Sprite.y</field><value name="mySprite"><block type="variables_get" id="(:R5%]gy)gJ95)wY1Fzr"><field name="VAR" id="2mP7Za[hxR$7O##$MDFc">thePlayer</field></block></value></block></value></block></next></block></statement></block></xml>
